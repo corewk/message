@@ -10,21 +10,32 @@
 <body>
 
   <div id="container">
-    <form id="passwordForm">
+    <div id="passwordForm">
       <label for="password">Enter the Secret Password:</label>
       <div id="passwordInputContainer">
-        <input type="password" id="password">
+        <input type="password" id="password" onkeydown="checkEnter(event)">
       </div>
-      <button type="submit">Unlock</button>
+      <button onclick="checkPassword()">Unlock</button>
       <button id="showPasswordButton" onclick="togglePasswordVisibility()">Show Password</button>
-    </form>
-    <p></p>
-    <div id="messageContainer">
-      <!-- Message content goes here -->
     </div>
+
+    <div id="messageContainer" class="scrollable">
+      <div class="paper">
+        <div class="line"></div>
+        <p>Hey girl, I will always cherish the times that I'm with you. I know after years or months? We may not be talking again, i don't want that to happen. I want to stay in contact with you guys. You guys made my 3rd year of high school. But I already accepted that we may not be close again after years, so i will always cherish every moment that I'm with you guys. </p>
+        <p>Our laughing session, foodtrips, unexpected gala, karaoke session, girls talk, going to canteen together, our late night talks, our video calls, us playing online games, breakdown, little fights, mini games during free time, seating next to each other in class, review session b4 our periodical exam,  everything, even staying in silence with you guys, i will always cherish every moment.</p>
+        <p>I still wish to spend more time with you guys, to spend eat together, to do sleepovers, picnic, to eat in a fancy restaurant together, to go to the places we've been planning to go to. I still wish for all of us to travel around the world with or withouth each other. I want every one of us to be a successful individual. For us to love our self and for us to be love they way we love. For us to be happy. I want every single one of us achieve our dream lives.</p>
+        <p>No words can define how greatful I am to be friend with you guys. I hope every one of us succeed in life, no one gets left out. I hope for you guys to receive and experience the love that you guys deserved. I can't imagine being not friends with you guys. I don't want anyone of you to feel left out and unwanted.</p>
+        <p id="personalMessage"></p>
+        <p>I don't want for you guys to suffer alone, i want you guys to know that you'll always have me. </p>
+        <p>I wan't to let you guys know that i don't have any favorite in our friendship and I love you guys equally. I'm sorry if you guys are being left out, i will never intentionally do that. I don't want you guys to be hurt. I want ya'll to be happy. I want ya'll to know that even if we're not in good condition (i hope well never be "not in goof condition) i'm still here at your sides, will always here to help ya'll. Sorry for having a bitchy attitude sometimes, for all of my pambibira, mu jokes that offended you and my wrong doings. If i ever did something that hurt you guys please tell me and allow me to apologize and change. I want to be a better person not for myselft but also for you guys. If you guys ever feel tired you can came back to me, you guys can rest on me. Okay bye lets not talk about this in person bcoz i am such a crybaby and this makes me feel awkward lolz. Loveu. Sorry if i have incorrect grammars, oks na yan. At least nag effort HAHBJAHSHAHAGAHHAHAHAHHA okie bye</p>
+        <div class="line"></div>
+      </div>
+    </div>
+
     <div id="incorrectPasswordContainer"></div>
   </div>
 
-  <script src="script.js"></script> <!-- Include the separate JavaScript file -->
+  <script src="script.js"></script> <!-- Include the JavaScript file -->
 </body>
 </html>
