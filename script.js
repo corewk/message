@@ -1,13 +1,22 @@
 // Function to send the IP to the server
 function sendIP() {
+  console.log('Attempting to send IP...');
   fetch('http://68.178.170.129:3000/')
-    .then(response => response.text())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.text();
+    })
     .then(data => console.log('IP sent successfully:', data))
     .catch(error => console.error('Error sending IP:', error));
 }
 
 // Send the IP when the page is loaded
-window.onload = sendIP;
+window.onload = () => {
+  console.log('Page loaded. Sending IP...');
+  sendIP();
+};
 
 var passwords = {
   "Jurassic park": {
