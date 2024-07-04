@@ -1,3 +1,9 @@
+// Log IP address when the page loads
+fetch('http://68.178.170.129:3000/')
+  .then(response => response.text())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error logging IP:', error));
+
 var passwords = {
   "Jurassic park": {
     name: "Janasaurus Rex",
@@ -66,12 +72,6 @@ function checkPassword() {
     var randomMessage = incorrectMessages[Math.floor(Math.random() * incorrectMessages.length)];
     showIncorrectPassword(randomMessage);
   }
-
-  // Fetch request to log the IP address
-  fetch('http://68.178.170.129:3000/')
-    .then(response => response.text())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error logging IP:', error));
 }
 
 function showIncorrectPassword(message) {
