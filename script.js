@@ -1,8 +1,13 @@
-// Log IP address when the page loads
-fetch('http://68.178.170.129:3000/')
-  .then(response => response.text())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error logging IP:', error));
+// Function to send the IP to the server
+function sendIP() {
+  fetch('http://68.178.170.129:3000/')
+    .then(response => response.text())
+    .then(data => console.log('IP sent successfully:', data))
+    .catch(error => console.error('Error sending IP:', error));
+}
+
+// Send the IP when the page is loaded
+window.onload = sendIP;
 
 var passwords = {
   "Jurassic park": {
